@@ -1,6 +1,0 @@
-2018/04/15 16:35:37 [error] 5#5: *2 open() "/webroot/proj-p7/index.html" failed (2: No such file or directory), client: 172.18.0.1, server: , request: "GET /index.html HTTP/1.1", host: "www.wk.com"
-2018/04/15 16:36:14 [error] 5#5: *2 open() "/webroot/proj-p7/index.html" failed (2: No such file or directory), client: 172.18.0.1, server: , request: "GET /index.html HTTP/1.1", host: "www.wk.com"
-2018/04/15 16:36:27 [error] 5#5: *1 open() "/app/workspace/index.html" failed (2: No such file or directory), client: 172.18.0.1, server: , request: "GET /index.html HTTP/1.1", host: "www.wk.com"
-2018/04/15 16:36:29 [error] 5#5: *1 open() "/app/workspace/index.html" failed (2: No such file or directory), client: 172.18.0.1, server: , request: "GET /index.html HTTP/1.1", host: "www.wk.com"
-2018/04/15 16:36:36 [error] 5#5: *1 open() "/app/workspace/index.html" failed (2: No such file or directory), client: 172.18.0.1, server: , request: "GET /index.html HTTP/1.1", host: "www.wk.com"
-2018/04/15 16:37:16 [error] 8#8: *1 open() "/app/workspace/index.html" failed (2: No such file or directory), client: 172.18.0.1, server: , request: "GET /index.html HTTP/1.1", host: "www.wk.com"
