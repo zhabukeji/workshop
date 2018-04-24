@@ -53,10 +53,12 @@ RUN docker-php-ext-configure gd \
 # see http://stackoverflow.com/a/8154466/291573) for usage of `printf`
 RUN printf "\n" | pecl install \
         imagick \
-        mongodb  && \
+        mongodb \
+        xdebug && \
     docker-php-ext-enable \
         imagick \
         mongodb \
+        xdebug
 
 
 
