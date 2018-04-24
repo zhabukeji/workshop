@@ -51,7 +51,8 @@ RUN docker-php-ext-configure gd \
 
 # Install PECL extensions
 # see http://stackoverflow.com/a/8154466/291573) for usage of `printf`
-RUN printf "\n" | pecl install \
+RUN pecl update-channels pecl.php.net &&\
+    printf "\n" | pecl install \
         imagick \
         mongodb  && \
     docker-php-ext-enable \
