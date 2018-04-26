@@ -16,13 +16,15 @@ services:
     ports:
       - "80:80"
   php-fpm-71:
-    build: ./php/php-fpm-71/Dockerfile-dev
+    build:
+      context: ./php/php-fpm-71/
+      dockerfile: Dockerfile-dev
     restart: always
     links:
      - "mysql:mysql"
     volumes:
       - ./app:/app:rw
-      - ./php/php-fpm-71/php-dev.ini:/usr/local/etc/php/php.ini:ro
+      - ./php/php-fpm-71/php-dev.ini:/usr/local/etc/php/php.ini:rw
       - ./logs/php-fpm:/var/log/php-fpm:rw
   mysql:
     image: mysql:5.7

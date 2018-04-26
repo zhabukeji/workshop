@@ -16,7 +16,9 @@ services:
     ports:
       - "80:80"
   php-fpm-71:
-    build: ./php/php-fpm-71/
+    build:
+      context: ./php/php-fpm-71/
+      dockerfile: Dockerfile
     restart: always
     links:
      - "mysql:mysql"
