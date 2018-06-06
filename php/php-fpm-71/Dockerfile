@@ -54,10 +54,12 @@ RUN docker-php-ext-configure gd \
 RUN pecl update-channels pecl.php.net &&\
     printf "\n" | pecl install \
         imagick \
-        mongodb  && \
+        mongodb  \
+        redis && \
     docker-php-ext-enable \
         imagick \
         mongodb \
+        redis
 
 
 

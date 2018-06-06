@@ -52,3 +52,13 @@ services:
 #    restart: always
 #    ports:
 #     - "27017:27017"
+  redis:
+    image: redis:4.0.9
+    restart: always
+    volumes:
+      - ./redis/redis.conf:/etc/redis.conf:rw
+      - ./dates/redis/dump.rdb:/data/dump.rdb:rw
+      - ./logs/redis/redis.log:/data/redis.log:rw
+    command: "redis-server /etc/redis.conf"
+    ports:
+     - "6379:6379"
