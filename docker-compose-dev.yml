@@ -57,8 +57,7 @@ services:
     restart: always
     volumes:
       - ./redis/redis.conf:/etc/redis.conf:rw
-      - ./dates/redis/dump.rdb:/data/dump.rdb:rw
-      - ./logs/redis/redis.log:/data/redis.log:rw
+      - ./dates/redis/:/data:rw
     command: "redis-server /etc/redis.conf"
     ports:
      - "6379:6379"
