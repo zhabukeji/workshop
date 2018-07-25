@@ -24,6 +24,7 @@ services:
     restart: always
     links:
      - "mysql:mysql"
+     - "redis:redis"
     volumes:
       - ./app:/app:rw
       - ./php/php-fpm-71/php.ini:/usr/local/etc/php/php.ini:ro
